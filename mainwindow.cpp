@@ -132,7 +132,7 @@ QTreeWidgetItem *MainWindow::addChildEmpNode(QTreeWidgetItem *parent, int index)
     EmployeeNodeItem *pItemName = new EmployeeNodeItem(ui->tree);
     pItemName->setLevel(level);
     // 加载本地文件，需要修改成本地的路径
-    pItemName->setHeadPath(QString::fromLocal8Bit("D:/Qt/workspace/project/tree/images/pic/%1.jpg").arg(index));
+     pItemName->setHeadPath(QString::fromLocal8Bit("D:/Qt/workspace/project/QT_treeDemo/images/pic/%1.jpg").arg(index));
 
     QString qfullName = QString::fromLocal8Bit("人员%1").arg(index);
     pItemName->setFullName(qfullName);
