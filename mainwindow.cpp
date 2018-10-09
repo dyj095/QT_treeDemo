@@ -63,7 +63,6 @@ void MainWindow::initTree()
         // 一级部门节点
         QTreeWidgetItem *pRootDeptItem = new QTreeWidgetItem();
         pRootDeptItem->setChildIndicatorPolicy(QTreeWidgetItem::ShowIndicator);
-        //pRootDeptItem->setChildIndicatorPolicy(QTreeWidgetItem::DontShowIndicator);
         //设置Data用于区分，Item是分组节点还是子节点，0代表分组节点，1代表子节点
         pRootDeptItem->setData(0, Qt::UserRole, 0);
         DepartNodeItem *pItemName = new DepartNodeItem(ui->tree);
@@ -81,12 +80,8 @@ void MainWindow::initTree()
         for(int j = 0; j < 5; j++){
             QString name = QString("二级部门%1").arg(j);
             QTreeWidgetItem *childItem = addChildNode(pRootDeptItem, i * 10 + j,name);
-
-            //DepartNodeItem *departNode = dynamic_cast<DepartNodeItem*>(ui->tree->itemWidget(childItem, 0));
             for(int g = 0; g < 5; g++){
                 addChildEmpNode(childItem, g);
-                //QTreeWidgetItem *childItem2 = addChildEmpNode(childItem, g);
-                //EmployeeNodeItem *empNode = dynamic_cast<EmployeeNodeItem*>(ui->tree->itemWidget(childItem2, 0));
             }
         }
     }
