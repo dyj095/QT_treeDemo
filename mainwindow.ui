@@ -51,32 +51,11 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">QTreeView
+       <string notr="true">QTreeWidget{ outline:0px; }
+QTreeView
 {
-   border-style:none;   
-   /* qproperty-indentation:20;这表式图标的宽度*/
+   border-style:none;
 } 
-/*
-QTreeView::branch
-{
-    background-color:rgba(255, 255, 255, 0) ;
-}
-
-QTreeView::branch:selected:active
-{
-    background-color: rgba(135, 206, 250, 153); 
-}
-
-QTreeView::branch:selected:!active, QTreeView::item:hover
-{
-    background-color: rgba(135, 206, 250, 50);
-}
-QTreeView::branch:has-children
-{
-    image-position:right;
-}*/
- 
- 
 
 QTreeView::item
 {
@@ -91,7 +70,23 @@ QTreeView::item:selected:active
 QTreeView::item:selected:!active, QTreeView::item:hover 
 {
     background-color: rgba(135, 206, 250, 50);
-}</string>
+}
+QScrollBar{
+     background: #ffffff;
+     width: 6px;
+ }
+QScrollBar::handle{
+     background:#cccccc;
+     border-radius:3px;
+     width: 6px;
+ }
+
+QScrollBar::sub-line{
+     background:transparent;
+ }
+QScrollBar::add-line{
+     background:transparent;
+ }</string>
       </property>
       <property name="editTriggers">
        <set>QAbstractItemView::NoEditTriggers</set>
