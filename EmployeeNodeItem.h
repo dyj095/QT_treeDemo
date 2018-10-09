@@ -19,6 +19,7 @@ class EmployeeNodeItem : public QWidget
 
 public:
     EmployeeNodeItem(QWidget *parent = 0);
+
     ~EmployeeNodeItem();
 
 public:
@@ -32,7 +33,6 @@ public:
 
     QSize getHeadLabelSize() const;
 
-    //void setIndentation(int indentation);
     int getIndentation();
 
     int getLevel();
@@ -49,10 +49,13 @@ private:
 private:
     Ui::EmployeeNodeItem *ui;
 
+    // 当前节点缩进距离
     int m_indentation;
 
+    // 当前节点的深度（级数）
     int m_level;
 
+    // 头像Label的宽度
     int m_headLabelWidth;
 };
 

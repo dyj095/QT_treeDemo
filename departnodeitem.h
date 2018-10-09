@@ -36,15 +36,15 @@ private:
 
 private:
     QPropertyAnimation *m_animation;
-
+    // 部门名称
     QString m_name;
-
+    // 部门ID
     QString m_id;
-
+    // 旋转角度
     int m_rotation;
-
+    // 当前节点缩进距离
     int m_indentation;
-
+    // 当前节点的深度（级数）
     int m_level;
 };
 
