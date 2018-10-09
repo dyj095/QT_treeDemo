@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/tree">
+        <file>Resources/0.png</file>
+        <file>Resources/15.png</file>
+        <file>Resources/30.png</file>
+        <file>Resources/45.png</file>
+        <file>Resources/60.png</file>
+        <file>Resources/75.png</file>
+        <file>Resources/90.png</file>
+        <file>Resources/arrow.png</file>
+        <file>Resources/arrow_normal.gft.png</file>
+        <file>Resources/defaultPic.png</file>
+        <file>Resources/head_mask.png</file>
+    </qresource>
+</RCC>
