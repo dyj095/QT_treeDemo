@@ -70,7 +70,7 @@ void MainWindow::initTree()
         pItemName->setLevel(0);
 
         int nMyFriendNum = 6;
-        QString qsGroupName = QString::fromLocal8Bit("一级部门%3 [%1/%2]").arg(0).arg(nMyFriendNum).arg(i);
+        QString qsGroupName = QString("一级部门%3 [%1/%2]").arg(0).arg(nMyFriendNum).arg(i);
         pItemName->setText(qsGroupName);
         //插入分组节点
         ui->tree->addTopLevelItem(pRootDeptItem);
@@ -79,7 +79,7 @@ void MainWindow::initTree()
             addChildEmpNode(pRootDeptItem, j);
         }
         for(int j = 0; j < 5; j++){
-            QString name = QString::fromLocal8Bit("二级部门%1").arg(j);
+            QString name = QString("二级部门%1").arg(j);
             QTreeWidgetItem *childItem = addChildNode(pRootDeptItem, i * 10 + j,name);
 
             //DepartNodeItem *departNode = dynamic_cast<DepartNodeItem*>(ui->tree->itemWidget(childItem, 0));
@@ -108,7 +108,7 @@ QTreeWidgetItem* MainWindow::addChildNode(QTreeWidgetItem *parent, int index, QS
     pItemName->setLevel(level);
 
     int nMyFriendNum = 6;
-    QString qsGroupName = QString::fromLocal8Bit("%4%3 [%1/%2]").arg(0).arg(nMyFriendNum).arg(index).arg(namePre);
+    QString qsGroupName = QString("%4%3 [%1/%2]").arg(0).arg(nMyFriendNum).arg(index).arg(namePre);
     pItemName->setText(qsGroupName);
     //擦入分组节点
     parent->addChild(pDeptItem);
@@ -132,11 +132,11 @@ QTreeWidgetItem *MainWindow::addChildEmpNode(QTreeWidgetItem *parent, int index)
     EmployeeNodeItem *pItemName = new EmployeeNodeItem(ui->tree);
     pItemName->setLevel(level);
     // 加载本地文件，需要修改成本地的路径
-     pItemName->setHeadPath(QString::fromLocal8Bit("D:/Qt/workspace/project/QT_treeDemo/images/pic/%1.jpg").arg(index));
+     pItemName->setHeadPath(QString("D:/Qt/workspace/project/QT_treeDemo/images/pic/%1.jpg").arg(index));
 
-    QString qfullName = QString::fromLocal8Bit("人员%1").arg(index);
+    QString qfullName = QString("人员%1").arg(index);
     pItemName->setFullName(qfullName);
-    pItemName->setSign(QString::fromLocal8Bit("欢迎访问杜燕军工作号-test!!!"));
+    pItemName->setSign(QString("欢迎访问杜燕军工作号-test!!!"));
     //擦入分组节点
     parent->addChild(pDeptItem);
     ui->tree->setItemWidget(pDeptItem, 0, pItemName);
